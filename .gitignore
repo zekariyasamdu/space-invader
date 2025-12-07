@@ -1,0 +1,53 @@
+# Compiled object files
+*.o
+*.obj
+*.slo
+*.lo
+
+# Precompiled headers
+*.gch
+*.pch
+
+# Compiled libraries
+*.so
+*.dll
+*.dylib
+*.a
+*.lib
+*.la
+*.lai
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Build directories
+build/
+ninja/
+bin/
+obj/
+Debug/
+Release/
+
+a.out
+*.out
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.dylib
+# IDE-specific files (adjust for your IDE)
+.vschttps://www.youtube.com/watch?v=c-hKSbzooAgode/
+*.user
+*.layout
+*.depend
+/.qmake.cache
+/.qmake.stash
+
+# Log files
+*.log
+
+# Dependency files
+*.d
