@@ -8,13 +8,13 @@ Prerequisites
 
 To build and run this game, you must have the following tools installed on your system:
 
-    C++ Compiler: A modern compiler (like GCC or Clang) that supports C++20 
+1. C++ Compiler: A modern compiler (like GCC or Clang) that supports C++20 
 
-    CMake: Used to manage the build process and generate the platform-specific build files.
+2. CMake: Used to manage the build process and generate the platform-specific build files.
 
-    Ninja: The high-speed build system generator used by CMake.
+3. Ninja: The high-speed build system generator used by CMake.
 
-    Raylib: The game library. Since this project is configured to use the globally installed Raylib library, you must have the development files installed on your system.
+4. Raylib: The game library. Since this project is configured to use the globally installed Raylib library, you must have the development files installed on your system.
 
 Installing Raylib on Ubuntu/Debian
 
@@ -28,10 +28,11 @@ The project uses a standard CMake build flow. Follow these steps from your termi
 ### 1. Clone the Repository
 
 First, download the source code:
-Bash
 
-git clone [YOUR REPOSITORY URL HERE]
+``` bash
+git clone https://github.com/zekariyasamdu/space-invader
 cd space_invader
+```
 
 ### 2. Configure CMake
 
