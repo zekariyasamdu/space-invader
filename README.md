@@ -62,4 +62,4 @@ Once compilation is complete, the executable file (space_invader) will be locate
 ./build/space_invader
 ```
 
-Note: for the last two steps just make the ./run.sh scriptan executable to automate your builds and runs.
+Note: for the last two steps just make the ./run.sh script an executable to automate your builds and runs.
