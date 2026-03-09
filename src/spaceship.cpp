@@ -31,3 +31,7 @@ Laser Spaceship::FireLaser() {
   Laser laser(position, -4);
   return laser;
 };
+
+float Spaceship::LastFiredTime() { return last_fired_time; }
+float Spaceship::CoolDownPeriod() { return cool_down_period; }
+void Spaceship::SetLastFiredTime(float time) { last_fired_time = time; }

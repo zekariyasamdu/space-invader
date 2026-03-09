@@ -10,4 +10,5 @@ public:
   Laser(Vector2 position, int speed);
   void Draw();
   void Update();
+  bool IsOffScreen();
 };
