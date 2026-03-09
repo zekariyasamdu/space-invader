@@ -1,16 +1,22 @@
+#include "header/game.hpp"
 #include <raylib.h>
 
 int main() {
-    InitWindow(450, 450, "test");
-    SetTargetFPS(60); 
+  int windowWidth = 550;
+  int windowHeight = 600;
+  Color background = {0, 0, 0, 255};
+  InitWindow(windowWidth, windowWidth, "space invader");
+  SetTargetFPS(60);
+  Game game;
+  while (!WindowShouldClose()) {
+    game.HandleInput();
+    BeginDrawing();
+    game.Update();
+    ClearBackground(background);
+    game.Draw();
+    EndDrawing();
+  }
 
-    while (!WindowShouldClose()) {
-        
-        BeginDrawing();
-        ClearBackground(RAYWHITE); 
-        EndDrawing();
-    }
-
-    CloseWindow();
-    return 0;
+  CloseWindow();
+  return 0;
 }
