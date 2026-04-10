@@ -3,6 +3,7 @@
 
 void Game::Draw() {
   spaceship.Draw();
+  alien.Draw();
   for (auto &laser : lasers) {
     laser.Draw();
   }
@@ -16,6 +17,8 @@ void Game::Update() {
       i--;
     }
   }
+
+  alien.Movement();
 };
 
 void Game::HandleInput() {

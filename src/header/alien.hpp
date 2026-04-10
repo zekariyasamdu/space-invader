@@ -1,20 +1,23 @@
 #pragma once
 #include "laser.hpp"
 #include <raylib.h>
-class Spaceship {
 
+class Alien {
 private:
   Vector2 position;
   Texture2D image;
   float cool_down_period;
   float last_fired_time;
+  bool move_right;
+  void MoveRight();
+  void MoveDown();
+  void MoveLeft();
 
 public:
-  Spaceship();
-  ~Spaceship();
+  Alien();
+  ~Alien();
   void Draw();
-  void MoveLeft();
-  void MoveRight();
+  void Movement();
   void SetLastFiredTime(float time);
   Laser FireLaser();
   float LastFiredTime();

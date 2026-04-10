@@ -5,7 +5,10 @@
 Spaceship::Spaceship() {
   image = LoadTexture("graphics/spaceship.png");
   position.x = ((float)GetScreenWidth() - image.width) / 2;
-  position.y = GetScreenHeight() - image.height - 10;
+  cool_down_period = 0.50;
+  last_fired_time = 0.00;
+  int padding = 10;
+  position.y = GetScreenHeight() - image.height - padding;
 };
 
 Spaceship::~Spaceship() { UnloadTexture(image); };

@@ -1,4 +1,5 @@
 #pragma once
+#include "alien.hpp"
 #include "laser.hpp"
 #include "spaceship.hpp"
 #include <raylib.h>
@@ -7,6 +8,7 @@
 class Game {
 private:
   Spaceship spaceship;
+  Alien alien;
   std::vector<Laser> lasers;
 
 public:
