@@ -9,6 +9,8 @@ private:
   float cool_down_period;
   float last_fired_time;
   bool move_right;
+  float width;
+  float height;
   void MoveRight();
   void MoveDown();
   void MoveLeft();
@@ -22,4 +24,5 @@ public:
   Laser FireLaser();
   float LastFiredTime();
   float CoolDownPeriod();
+  Rectangle GetRect() const;
 };

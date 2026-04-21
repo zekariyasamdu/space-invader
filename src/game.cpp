@@ -1,4 +1,5 @@
 #include "header/game.hpp"
+#include "header/utils.hpp"
 #include <raylib.h>
 
 void Game::Draw() {
@@ -10,6 +11,8 @@ void Game::Draw() {
 };
 
 void Game::Update() {
+
+  // Laser cleanup
   for (int i = 0; i < lasers.size(); i++) {
     lasers[i].Update();
     if (lasers[i].IsOffScreen()) {
@@ -17,8 +20,15 @@ void Game::Update() {
       i--;
     }
   }
-
   alien.Movement();
+
+  // check collision
+  for (int i = 0; i < lasers.size(); i++) {
+    if (CheckCollision(lasers[i], alien)) {
+      lasers.erase(lasers.begin() + i);
+      i--;
+    }
+  }
 };
 
 void Game::HandleInput() {

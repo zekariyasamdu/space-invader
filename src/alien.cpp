@@ -6,6 +6,8 @@ Alien::Alien() {
   position.x = ((float)GetScreenWidth() - image.width) / 2;
   cool_down_period = 0.50;
   last_fired_time = 0.00;
+  height = image.height;
+  width = image.width;
   position.y = (GetScreenHeight() / 2.00) - image.height;
   move_right = true;
 };
@@ -35,4 +37,7 @@ void Alien::Movement() {
     MoveRight();
   else
     MoveLeft();
+}
+Rectangle Alien::GetRect() const {
+  return {position.x, position.y, this->width, this->height};
 }
