@@ -1,10 +1,15 @@
 #include "header/game.hpp"
+#include "header/alien.hpp"
 #include "header/utils.hpp"
 #include <raylib.h>
 
+Game::Game() { aliens.emplace_back(); }
+
 void Game::Draw() {
   spaceship.Draw();
-  alien.Draw();
+  for (auto &alien : aliens) {
+    alien.Draw();
+  }
   for (auto &laser : lasers) {
     laser.Draw();
   }
@@ -20,13 +25,21 @@ void Game::Update() {
       i--;
     }
   }
-  alien.Movement();
+
+  // aliens movement
+  for (auto &alien : aliens) {
+    alien.Movement();
+  }
 
   // check collision
   for (int i = 0; i < lasers.size(); i++) {
-    if (CheckCollision(lasers[i], alien)) {
-      lasers.erase(lasers.begin() + i);
-      i--;
+    for (int j = 0; j < aliens.size(); j++) {
+      if (CheckCollision(lasers[i], aliens[j])) {
+        lasers.erase(lasers.begin() + i);
+        aliens.erase(aliens.begin() + j);
+        i--;   // adjust laser index
+        break; // 🔥 stop checking this laser
+      }
     }
   }
 };

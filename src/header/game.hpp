@@ -8,10 +8,12 @@
 class Game {
 private:
   Spaceship spaceship;
-  Alien alien;
+  std::vector<Alien> aliens;
   std::vector<Laser> lasers;
+  Alien test;
 
 public:
+  Game();
   void Draw();
   void Update();
   void HandleInput();
